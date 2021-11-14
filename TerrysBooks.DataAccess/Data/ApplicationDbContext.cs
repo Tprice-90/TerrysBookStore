@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using TerrysBooks.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,6 @@ namespace TerrysBookStore.DataAccess.Data
             : base(options)
         {
         }
+        public DbSet<Category> Categories { get; set; }
     }
 }
