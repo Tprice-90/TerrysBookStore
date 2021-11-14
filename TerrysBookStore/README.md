@@ -97,3 +97,12 @@ Time: 5:28PM
 -Cleaned project solution and built to make sure there were no errors, none found build successful
 -Updated appsettings.json Database connection name, now adding migration
 -Migration file: 20211114223325_AddDefaultIdentityMigration.cs added
+-Created Category Model and updated ApplicationDbContext to recieve model then created Category Migration
+-file: 20211114224405_AddCategoryToDb.cs added
+
+Time: 5:46PM
+-Added Repository folder to DataAccess project and an IRepository folder inside that one
+-Created Irepository Interface and updated it to include CRUD properties
+
+Time: 6:14PM
+-After completing all CRUD method updating, cleaned and built solution to check for errors..none found
