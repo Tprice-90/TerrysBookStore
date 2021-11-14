@@ -6,9 +6,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using TerrysBookStore.Models;
+using TerrysBookStore.Models.ViewModels;
 
-namespace TerrysBookStore.Controllers
+namespace TerrysBookStore.Area.Customer.Controllers
 {
+    [Area("Customers")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

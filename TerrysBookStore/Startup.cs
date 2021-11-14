@@ -11,7 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TerrysBookStore.Data;
+//using TerrysBookStore.Data;
+using TerrysBookStore.DataAccess.Data;
 
 namespace TerrysBookStore
 {
@@ -63,7 +64,7 @@ namespace TerrysBookStore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=Customers}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
