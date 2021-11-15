@@ -106,3 +106,9 @@ Time: 5:46PM
 
 Time: 6:14PM
 -After completing all CRUD method updating, cleaned and built solution to check for errors..none found
+
+Time: 11:56PM
+-Created the IUnitOfWork interface which implements the IDisposable interface
+-Created UnitOfWork class which implements IUnitOfWork interface and Dispose and Save functions
+-Modified startup.cs to include IUnitOfWork and UnitOfWork in the ConfigureServices call, included new using 
+ statements which call to the Repository and Data section in the DataAccess project

@@ -11,8 +11,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TerrysBooks.DataAccess.Repository.IRepository;
 //using TerrysBookStore.Data;
 using TerrysBookStore.DataAccess.Data;
+using TerrysBooks.DataAccess.Repository;
 
 namespace TerrysBookStore
 {
@@ -35,6 +37,7 @@ namespace TerrysBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
         }
 
