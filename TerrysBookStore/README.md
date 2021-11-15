@@ -112,3 +112,11 @@ Time: 11:56PM
 -Created UnitOfWork class which implements IUnitOfWork interface and Dispose and Save functions
 -Modified startup.cs to include IUnitOfWork and UnitOfWork in the ConfigureServices call, included new using 
  statements which call to the Repository and Data section in the DataAccess project
+
+Date: 2021/11/15
+Time: 12:43AM
+-After updating Admin/View Index.cshtml to include Edit and Delete tabs, first with div tags, then
+ added javascript code to category.js within the wwwroot/js folder
+-ran project and everything appeared to be working except for the Add Category Button....
+-I tried hard coding a category but was unsuccessful...
+-pushing to GitHub now.
