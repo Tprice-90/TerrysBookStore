@@ -120,3 +120,8 @@ Time: 12:43AM
 -ran project and everything appeared to be working except for the Add Category Button....
 -I tried hard coding a category but was unsuccessful...
 -pushing to GitHub now.
+
+Time: 12:06PM
+-I had some issues regarding the Add Category button functionality... I tried updating the database and
+ recieved the error: There is already an object named 'Categories' in the database. as well as an error:
+ failed executing DbCommand (5s) [Parameters=[], CommandType='Text', CommandTimeout='30']
