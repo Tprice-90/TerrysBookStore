@@ -10,7 +10,7 @@ using TerrysBookStore.DataAccess.Data;
 namespace TerrysBooks.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211114224405_AddCategoryToDb")]
+    [Migration("20211117153528_AddCategoryToDb")]
     partial class AddCategoryToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

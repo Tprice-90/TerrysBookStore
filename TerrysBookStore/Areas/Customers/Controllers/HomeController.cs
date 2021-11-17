@@ -5,10 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using TerrysBookStore.Models;
 using TerrysBookStore.Models.ViewModels;
 
-namespace TerrysBookStore.Area.Customer.Controllers
+namespace TerrysBookStore.Area.Customers.Controllers
 {
     [Area("Customers")]
     public class HomeController : Controller

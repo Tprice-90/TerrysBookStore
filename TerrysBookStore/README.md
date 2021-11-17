@@ -125,3 +125,19 @@ Time: 12:06PM
 -I had some issues regarding the Add Category button functionality... I tried updating the database and
  recieved the error: There is already an object named 'Categories' in the database. as well as an error:
  failed executing DbCommand (5s) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+Date: 2021/11/17
+Time: 9:26AM - 10:43AM
+-Trying to debug 2 issues:
+	1.Add Category function not working
+	2.Update-Database throwing error..
+-Found that trying to hard code a Category on the Index.cshtm page was the issue behind the database-update
+-going to go through slides and see if there was a step that I missed
+-Noticing that the AddDefaultIdentityMigration is not appearing in the SqlObjectExplorer
+-tried deleting the migration and re-adding it with file: 20211117143825_AddDefaultIdentityMigration.cs
+ was not successful, still not showing up in server objects
+-Solved issue with DefaultIdentityMigration not displaying by removing the migration then re-adding with file
+ 20211117152721_AddDefaultIdentityMigration no will add Category Migration 20211117153528_AddCategoryToDb
+-was only successful by creating the table and drop function manually
+-Add Category function still not working....
+-stoping now, will pick back up later
