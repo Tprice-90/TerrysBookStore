@@ -12,6 +12,8 @@ namespace TerrysBooks.DataAccess.Repository.IRepository
     public interface IUnitOfWork : IDisposable
     {
         ICategoryRepository Category { get; set; }
-        ISP_Call SP_Call { get; }
+        ISP_Call SP_Call { get; set; }
+
+        void Save();
     }
 }

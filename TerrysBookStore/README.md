@@ -141,3 +141,22 @@ Time: 9:26AM - 10:43AM
 -was only successful by creating the table and drop function manually
 -Add Category function still not working....
 -stoping now, will pick back up later
+
+Date: 2021/11/22
+Time: 10:58 - 12:15PM [1 hour 17 minutes]
+Applying Code To Create a Category, Edit, and Delete
+-Created the Upsert.cshtml method within the CategoryController.cs file
+-Added Upsert view to the Views/Shared directory and added code provided in the Category Upsert.txt file
+-Created partial view for Edit and Back functions with _CreateAndBackToListButton.cshtml and 
+-EditAndBackToList.cshtm files, added in code which contained form control and asp-routing information
+-Modified Upsert file to include the added partial views
+-updated Index.cshtml in the Admin/Views/Category directory to include the newly created Upsert asp-action
+-Updated Title h2 tag to use the @title variable which now displays Edit Category/Create Category based on
+ the context
+-included validation script to show any errors when editing or creating a category name
+-Created an Upsert POST action method which calls to _unitOfWork, added Void to Save() method
+-Removed SaveChanges() method from the CategoryRepository file and moved the Save() function to outside of the
+ validation check, as well as added a return to the Index
+-Tested the app to see if Category could be created and edited...SUCCESS!
+-Added Delete function to CategoryController.cs then added that functionality to the category.js file
+-tested Delete functionality and it is not working...
