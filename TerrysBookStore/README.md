@@ -160,3 +160,46 @@ Applying Code To Create a Category, Edit, and Delete
 -Tested the app to see if Category could be created and edited...SUCCESS!
 -Added Delete function to CategoryController.cs then added that functionality to the category.js file
 -tested Delete functionality and it is not working...
+
+Date: 2021/11/23
+Time: 2:00PM-4:00PM [2 hours]
+Creating Cover CRUD
+-created CoverType.cs and copied Category class and updated the class name to reflect CoverType
+-updated dbContext file to include CoverType because my initial migration failed
+-migration also failed because i forgot to select .DataAccess as the default project
+-New migration file: 20211123193015_AddCoverTypeToDb.cs
+-database updated
+-Created CoverTypeController, copied code from CategoryController and updated all instances
+ of the word Category and category to CoverType and coverType since both controllers use the
+ same methods
+-Had issue where when testing CoverType CRUD, error thrown with db_save(), checked SQL server
+ Object and saw CoverType table was not created, to resolve, had to delete Categories table
+ then re-update database, both tables were created.. tested CRUD and it worked this time.
+
+Time: 4:00PM - 4:45PM {45 Minutes}
+Creating Product CRUD
+-created Product model and added reference to it in dbContext
+-file created: 20211123211055_AddProductToDb.cs
+-checked SOE to make sure table was created and it was
+-updated Product class to require Title, ISBN and Author, created new migration
+-file created: 20211123211809_AddValidationToProduct.cs
+-Created ProductRepository and updated code
+-Created IProductRepository and updated code
+-added Product to both UnitOfWork and IUnitOfWork
+
+Time: 5:00PM - 5:43PM [43 Minutes]
+Product CRUD Part 2
+-Created ProductController.cs then copied code from CoverType.cs
+-updated code to use IWebHostEnvironment and added using statement to include AspNetCore.Hosting
+-Created ProductVM in ViewModels directory in .Models project
+-set class to public and updated code and installed Microsoft.AspNetCore.Mvc.ViewFeatures NuGet
+ package
+-updated ProductControler to include ProductVM and added using statements to resolve issue with
+ ProductVM not being found: using TerrysBooks.Models.ViewModels as well as AspNetCore.Mvc.Rendering
+-Modified ProductController API to include Category and CoverType
+-Added Index view for Product and updated it to include all properties for the Product class as well
+ as modifying the js script to reference a newly created product.js
+-copied category.js and renamed it product.js and modified it to include columns for all the properties
+ in Product class
+-updated _Layout.cshtml so it would include the Product view in the dropdown list
+-tested app to make sure product view was working and it did...Now pushing to GitHub

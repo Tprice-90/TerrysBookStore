@@ -13,6 +13,8 @@ namespace TerrysBooks.DataAccess.Repository.IRepository
     {
         ICategoryRepository Category { get; set; }
         ISP_Call SP_Call { get; set; }
+        ICoverTypeRepository CoverType { get; set; }
+        IProductRepository Product { get; set; }
 
         void Save();
     }

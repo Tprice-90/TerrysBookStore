@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TerrysBooks.Models;
 
 namespace TerrysBooks.DataAccess.Repository
 {
@@ -16,11 +17,14 @@ namespace TerrysBooks.DataAccess.Repository
             _db = db;
             Category = new CategoryRepository(_db);
             SP_Call = new SP_Call(_db);
+            CoverType = new CoverTypeRepository(_db);
+            Product = new ProductRepository(_db);
         }
 
         public ICategoryRepository Category { get; set; }
         public ISP_Call SP_Call { get; set; }
-
+        public ICoverTypeRepository CoverType { get; set; }
+        public IProductRepository Product { get; set; }
         public void Dispose()
         {
             _db.Dispose();

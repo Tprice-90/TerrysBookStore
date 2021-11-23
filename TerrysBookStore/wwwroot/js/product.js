@@ -8,19 +8,23 @@ $(document).ready(function () {
 function loadDataTable() {
     dataTable = $('#tblData').DataTable({
         "ajax": {
-            "url": "/Admin/Category/GetAll"
+            "url": "/Admin/Product/GetAll"
         },
         "columns": [
-            { "data": "name", "width": "60%" },
+            { "data": "name", "width": "15%" },
+            { "data": "isbn", "width": "15%" },
+            { "data": "price", "width": "15%" },
+            { "data": "author", "width": "15%" },
+            { "data": "category.Name", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `
                             <div class="text-center">
-                                <a href="/Admin/Category/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
+                                <a href="/Admin/Product/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
                                     <i class="fas fa-edit"></i>&nbsp;
                                 </a>
-                                <a onlcick=Delete("/Admin/Category/Delete/${data}")class="btn btn-danger text-white" style="cursor:pointer">
+                                <a onlcick=Delete("/Admin/Product/Delete/${data}")class="btn btn-danger text-white" style="cursor:pointer">
                                     <i class="fas fa-trash"></i>&nbsp;
                                 </a>
                             </div>
