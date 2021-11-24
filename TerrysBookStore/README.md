@@ -203,3 +203,15 @@ Product CRUD Part 2
  in Product class
 -updated _Layout.cshtml so it would include the Product view in the dropdown list
 -tested app to make sure product view was working and it did...Now pushing to GitHub
+
+Date: 2021/11/24
+Time: 10:16AM
+-Was having an issue where when trying to access Product list on the app was generating an error:
+ System.InvalidOperationException: 'An error was generated for warning 
+ 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': 
+ Unable to find navigation ' CoverType' specified in string based include path ' CoverType'. 
+ This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' 
+ to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.'
+-With some assistance from Abby I found that I had a syntax error in the ProductController.cs file
+ where there was an extra space between the two included properties in the GetAll() method...
+ removing the space allowed the app to function properly
