@@ -215,3 +215,13 @@ Time: 10:16AM
 -With some assistance from Abby I found that I had a syntax error in the ProductController.cs file
  where there was an extra space between the two included properties in the GetAll() method...
  removing the space allowed the app to function properly
+
+Date: 2021/11/29
+Time: 5:00PM - 5:44PM [44 minutes]
+Debugging Delete Function
+-Was comparing my code to github example code provided
+-started with DataAccess Repository and IRepostory files for both Category and Cover Type
+-Moved on to compare each Category and CoverType Index files and Upsert files
+-found issue was a Typo in the ........ ONCLICK function where I had it spelled Onlcik...
+-Tested and not only did it fix the issue I had with the delete button not working, but also with
+ the Category data loading in CoverType as well. all seems right now....

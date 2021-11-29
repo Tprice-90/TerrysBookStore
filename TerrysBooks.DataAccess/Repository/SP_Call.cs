@@ -73,7 +73,11 @@ namespace TerrysBooks.DataAccess.Repository
 
         public T Single<T>(string procedureName, DynamicParameters param = null)
         {
-            throw new NotImplementedException();
+            using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
+            {
+                sqlCon.Open();
+                return (T)Convert.ChangeType(sqlCon.ExecuteScalar<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure), typeof(T));
+            }
         }
     }
 }

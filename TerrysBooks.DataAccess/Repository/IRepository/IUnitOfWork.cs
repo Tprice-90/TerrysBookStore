@@ -11,10 +11,10 @@ namespace TerrysBooks.DataAccess.Repository.IRepository
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICategoryRepository Category { get; set; }
-        ISP_Call SP_Call { get; set; }
-        ICoverTypeRepository CoverType { get; set; }
-        IProductRepository Product { get; set; }
+        ISP_Call SP_Call { get; }
+        ICategoryRepository Category { get; }
+        ICoverTypeRepository CoverType { get; }
+        IProductRepository Product { get; }
 
         void Save();
     }
