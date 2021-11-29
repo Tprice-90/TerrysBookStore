@@ -57,7 +57,7 @@ namespace TerrysBookStore.Areas.Admin.Controllers
             return View(productVM);
         }
 
-        /*[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(Product product)
         {
@@ -75,7 +75,7 @@ namespace TerrysBookStore.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
-        }*/
+        }
 
         #region API CALLS
         [HttpGet]
