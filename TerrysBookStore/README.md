@@ -264,3 +264,11 @@ Time:4:15PM - 4:47PM [32 Minutes]
 
 Time: 5:00PM
 Updating HomeController
+-Added using statements to import Models and IRepository
+-Implemented unitOfWork into Home controller
+-Imported Product list and View(ProductList)
+-Removed defauly Welcome div on Home Index added Product list with sections for book title, author, listPrice
+ and imgUrl
+-After testing, image cards pop up but images do not load properly
+-Fixed an error in the product controller when defining the webPath, forgot to include "\" after the product 
+ folder name. updated database imgUrl paths in SQL Server Objects and images appeared properly

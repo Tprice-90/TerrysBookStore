@@ -68,7 +68,7 @@ namespace TerrysBookStore.Areas.Admin.Controllers
                 if (files.Count > 0)
                 {
                     string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(webRootPath, @"images\products");
+                    var uploads = Path.Combine(webRootPath, @"images\products\");
                     var extension = Path.GetExtension(files[0].FileName);
 
                     if (productVM.Product.ImgUrl != null)
@@ -84,7 +84,7 @@ namespace TerrysBookStore.Areas.Admin.Controllers
                     {
                         files[0].CopyTo(filesStreams);
                     }
-                    productVM.Product.ImgUrl = @"\images\product" + fileName + extension;
+                    productVM.Product.ImgUrl = @"\images\products\" + fileName + extension;
                 }
                 else
                 {
