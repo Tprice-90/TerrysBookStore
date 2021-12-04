@@ -248,3 +248,19 @@ Create Product Not Working
  folder.
 -Solved the issue, on the product.js load data tables function, the data categories needed to be updated 
  to reflect the product properties.
+
+Date: 2021/12/04
+Time: 2:33PM - 2:56PM
+Delete Product Debugging
+-Product is added properly but delete function is not working...Looking through provided code to find
+ inconsistencies with my code.
+-Updated ProductController to include ProductVM calls
+
+Time:4:15PM - 4:47PM [32 Minutes]
+-Solved issue with Image not uploading to database, product folder should have been product"s".
+-Still looking into Delete function for products not working...have gone over js code, product controller
+ product upsert but have not found any errors yet...Will move on to Displaying Products on home screen and
+ will come back to this
+
+Time: 5:00PM
+Updating HomeController
