@@ -230,8 +230,21 @@ Time: 5:45PM - 6:10PM [25 minutes]
 -Found issue with the Add product page where when selecting a Cover Type it would show a list of 
  Categories instead...
 
- Date: 2021/12/03
- Time: 8:30PM - 8:44PM [14 minutes]
- -After looking through the code from github, solved the issue with Categories showing up in the
-  Cover Type dropdown when I found that Categories was being called instead of Cover Type in the 
-  Product Upsert file.
+Date: 2021/12/03
+Time: 8:30PM - 8:44PM [14 minutes]
+-After looking through the code from github, solved the issue with Categories showing up in the
+ Cover Type dropdown when I found that Categories was being called instead of Cover Type in the 
+ Product Upsert file.
+
+Time: 10:22PM - 11:10PM [48 Minutes]
+Create Product Not Working
+-When Creating a product I get the error:
+  DataTables warning: table id=tblData - Requested unknown parameter 'name' for row 0, column 0. 
+						For more information about this error, please see http://datatables.net/tn/4
+-All that appears in the table is the ISBN and the Author, however, in SQL Object Viewer it shows
+ all information except for the ImgUrl.... Delete Button also not functional.
+-Going through provided github code to compare and see errors I have in my code.
+-Noticed that in the provided code, the Product Upsert was altered to include an Image folder in the wwwroot
+ folder.
+-Solved the issue, on the product.js load data tables function, the data categories needed to be updated 
+ to reflect the product properties.
