@@ -24,7 +24,7 @@ function loadDataTable() {
                                 <a href="/Admin/Product/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
                                     <i class="fas fa-edit"></i>&nbsp;
                                 </a>
-                                <a onlcick=Delete("/Admin/Product/Delete/${data}")class="btn btn-danger text-white" style="cursor:pointer">
+                                <a onclick=Delete("/Admin/Product/Delete/${data}")class="btn btn-danger text-white" style="cursor:pointer">
                                     <i class="fas fa-trash"></i>&nbsp;
                                 </a>
                             </div>

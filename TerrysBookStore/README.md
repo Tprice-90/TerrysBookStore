@@ -229,3 +229,9 @@ Debugging Delete Function
 Time: 5:45PM - 6:10PM [25 minutes]
 -Found issue with the Add product page where when selecting a Cover Type it would show a list of 
  Categories instead...
+
+ Date: 2021/12/03
+ Time: 8:30PM - 8:44PM [14 minutes]
+ -After looking through the code from github, solved the issue with Categories showing up in the
+  Cover Type dropdown when I found that Categories was being called instead of Cover Type in the 
+  Product Upsert file.
